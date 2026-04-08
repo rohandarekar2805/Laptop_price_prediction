@@ -1,0 +1,1 @@
+web: gunicorn laptop_price.wsgi
