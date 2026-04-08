@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laptop Price Predictor</title>
+</head>
+<body>
+    <h1>Laptop Price Prediction</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Brand: <input type="text" name="Brand" placeholder="Asus" required></p>
+        <p>Model: <input type="text" name="Model" placeholder="ExpertBook" required></p>
+        <p>CPU: <input type="text" name="CPU" placeholder="Intel Core" required></p>
+        <p>RAM (GB): <input type="number" name="RAM" placeholder="8" required></p>
+        <p>Storage (GB): <input type="number" name="Storage" placeholder="512" required></p>
+        <p>Storage type: <input type="text" name="Storage type" placeholder="SSD" required></p>
+        <p>GPU: <input type="text" name="GPU" placeholder="No GPU" required></p>
+        <p>Screen Size: <input type="text" name="Screen" placeholder="15.6" required></p>
+        <p>Touch: <input type="text" name="Touch" placeholder="No" required></p>
+        <p>Status: <input type="text" name="Status" placeholder="New" required></p>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if result %}
+        <h2 style="color: blue;">Predicted Price: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
