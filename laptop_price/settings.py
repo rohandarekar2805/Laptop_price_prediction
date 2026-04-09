@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-1_nz=+8=q)(37egc4x=c*)3m#5_i)+nfl&0@)dfenht&(6^-@b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['laptop-price-prediction-6.onrender.com', 'localhost', '127.0.0.1','*']
+
+CSRF_TRUSTED_ORIGINS = ['https://laptop-price-prediction-6.onrender.com']
 
 
 # Application definition
